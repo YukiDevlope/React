@@ -12,7 +12,7 @@ services:
     volumes:
     - ./projects:/projects
     command: 
-      bash -c "cd test && yarn start"
+      bash -c "cd react-sample && yarn add @mui/material @emotion/react @emotion/styled && yarn start"
     ports: 
     - 3000:3000
     # env_file: .env
