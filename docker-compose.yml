@@ -4,15 +4,15 @@ services:
 
   reactjs:
     build: 
-      context: ./reactJS/
+      context: ./projects/
       dockerfile: Dockerfile
     tty: true
     environment:
     - NODE_ENV=production
     volumes:
-    - ./reactJS:/reactJS 
+    - ./projects:/projects
     command: 
-      bash -c "cd react-sample && yarn start"
+      bash -c "cd test && yarn start"
     ports: 
     - 3000:3000
-    env_file: .env
+    # env_file: .env
